@@ -1,0 +1,45 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 col">
+      <h3 class="text-center">query</h3>
+      <div class="form-group">
+      <span class="col-md-4">
+     <label class="form-group">codes:</label>
+           <br/>
+      <p-dropdown [options]="dataSourceCode" [(ngModel)]="code" [filter]="true"
+                  [style]="{'width':'150px'}" (onChange)="changeName()"></p-dropdown>
+      </span>
+      <span class="col-md-4 ">
+      <label>names:</label>
+        <br/>
+      <p-dropdown [options]="dataSourceName" [(ngModel)]="name" [style]="{'width':'150px'}" [filter]="true"
+                  autoWidth="true" (onChange)="changeCode()"></p-dropdown>
+      </span>
+
+
+      </div>
+    </div>
+  </div>
+  <br/>
+  <div class="row">
+    <div class="col-md-5"></div>
+    <div class="col-md-2 form-group">
+      <button class="form-control" (click)="search(0,10)">search</button>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8 col">
+    <p-dataTable [value]="gridDataSource" [lazy]="true" (onLazyLoad)="loadCarsLazy($event)"[paginator]="true"  [rows]="10"  [totalRecords]="totalR" >
+
+      <p-column [field]="item.field" [header]="item.header" *ngFor="let item of gridColumns"></p-column>
+
+    </p-dataTable>
+  </div>
+</div>

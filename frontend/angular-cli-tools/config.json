@@ -1,0 +1,49 @@
+{
+    "commands": {
+        "save": {
+            "rootDirectory": "./templates/saved"
+        },
+        "generate": {
+            "createBarrels": false
+        }
+    },
+    "templateMap": {
+        "card": {
+            "component": "./templates/custom/card/component.ts",
+            "html": "./templates/custom/card/component.html",
+            "style": "./templates/custom/card/component.scss"
+        },
+        "with-module": {
+            "html": "./templates/custom/component-with-module/component.html",
+            "style": "./templates/custom/component-with-module/component.scss",
+            "component": "./templates/custom/component-with-module/component.ts",
+            "module": "./templates/custom/component-with-module/module.ts"
+        },
+        "reactive-form": {
+            "html": "./templates/custom/reactive-form/component.html",
+            "style": "./templates/custom/reactive-form/component.scss",
+            "component": "./templates/custom/reactive-form/component.ts",
+            "module": "./templates/custom/reactive-form/module.ts"
+        },
+		 "lookup": {
+			"component": "./templates/custom/lookup/component.ts",
+            "html": "./templates/custom/lookup/component.html",
+            "service": "./templates/custom/lookup/service.ts"
+           
+        } 
+		,
+		 "lookupr": {
+			"component": "./templates/custom/lookupr/component.ts",
+            "html": "./templates/custom/lookupr/component.html",
+            "service": "./templates/custom/lookupr/service.ts"
+           
+        }
+		,
+		 "lookupnote": {
+			"component": "./templates/custom/lookupnote/component.ts",
+            "html": "./templates/custom/lookupnote/component.html",
+            "service": "./templates/custom/lookupnote/service.ts"
+           
+        }
+    }
+}

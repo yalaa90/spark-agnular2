@@ -1,0 +1,31 @@
+
+<div class="container" >
+
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 col">
+      <h1 class="text-center">title</h1>
+      <form  [formGroup]="formR"  >
+        <div class="form-group-sm" >
+          <lu-bar (submit)="saveForm()" (delete)="deleteForm()" (new)="newForm()" (isList)="changeShowType()"> </lu-bar>
+          <grid *ngIf="isList==true" [dataSource]="dataSource"  [columns]="columns" (recordClick)="onRecordDbClick($event)" (recordSelected)="onRecordSeleced($event)"></grid>
+          <div *ngIf="isList==false">
+
+                    <text-box inputType="textBox" name="code" formControlName="code" key="رمز"> </text-box>
+
+                    <text-box inputType="textBox" name="name" formControlName="name" key="اسم"> </text-box> 
+					
+					 <text-box inputType="textArea" name="note" formControlName="note" key="الملاحظات"> </text-box>  
+					 
+					</div>
+
+        </div>
+
+      </form>
+    </div>
+    <div class="col-md-2">
+
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+
+
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 col">
+      <h1>{{status}} 10 counties</h1>
+
+      <div>
+
+        <input type="radio" value="top" #rd (click)="change(rd)"   name="isDec" checked="true"> Top
+        <input type="radio" value="bottom" #rb (click)="change(rb)"   name="isDec"> bottom
+      </div>
+
+      <br>
+      <p-dataTable [value]="gridDataSource"  >
+
+        <p-column [field]="item.field" [header]="item.header" *ngFor="let item of gridColumns"></p-column>
+
+      </p-dataTable>
+    </div>
+  </div>
+</div>
